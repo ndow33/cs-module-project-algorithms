@@ -3,9 +3,22 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
+    # counter determines the index
+    counter = 0
+    # the index increases everytime 
+    # the value does not equal 0
 
-    pass
+    # go through each index in the array
+    for i in range(len(arr)):
+        # if it is 0
+        if arr[counter] == 0:
+            # pop it off and move it to the end
+            arr.append(arr.pop(counter))
+        else:
+            counter += 1
+    # return the rearranged array
+    return arr
+
 
 
 if __name__ == '__main__':
