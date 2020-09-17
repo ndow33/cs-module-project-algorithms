@@ -2,18 +2,18 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
+def moving_zeroes(arr): # O(n^2)
     # counter determines the index
     counter = 0
     # the index increases everytime 
     # the value does not equal 0
 
     # go through each index in the array
-    for i in range(len(arr)):
+    for i in range(len(arr)): # O(n)
         # if it is 0
         if arr[counter] == 0:
             # pop it off and move it to the end
-            arr.append(arr.pop(counter))
+            arr.append(arr.pop(counter)) # O(n)
         else:
             counter += 1
     # return the rearranged array

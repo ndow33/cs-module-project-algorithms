@@ -2,7 +2,7 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
-def sliding_window_max(nums, k):
+def sliding_window_max(nums, k): # O(n^2)
     # Create an array to hold the max values
     maxes = []
 
@@ -11,12 +11,12 @@ def sliding_window_max(nums, k):
     # instantiate a beginning index of the window (example: i = 0)
     i = 0
     # while index k is inside of the array
-    while k <= length:
+    while k <= length: # O(n)
         # Create a sub array from index i (inclusive) to index k (exclusive)
-        sub = nums[i:k]
+        sub = nums[i:k] # O(n)
         # find the max value in the sub array
         # append it to the maxes array
-        maxes.append(max(sub))
+        maxes.append(max(sub)) # O(n)
         # increment k += 1
         k += 1
         # increment i += 1

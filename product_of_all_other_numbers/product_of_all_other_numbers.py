@@ -2,7 +2,7 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
+def product_of_all_other_numbers(arr): # O(n)
     # products = create an array that will hold the products
     products = []
     # set total to the value of the first element of the array

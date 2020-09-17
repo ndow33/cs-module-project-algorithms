@@ -4,8 +4,7 @@ Returns: an integer
 '''
 def single_number(arr):
     # sort the array
-    arr.sort()
-    print(arr)
+    arr.sort() # O(n log n)
     # create a boolean expression for single
     single = False
     # instantiate an index
