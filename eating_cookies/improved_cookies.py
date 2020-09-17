@@ -4,7 +4,7 @@ Returns: an integer
 '''
 # how many ways can cookie monster eat n cookies?
 # what is the runtime?
-# O(3^n)
+# O(n) linear
 def eating_cookies(n):
     # set the base cases
     n0 = 1
@@ -21,7 +21,9 @@ def eating_cookies(n):
     elif n == 1:
         return 1
     else:
-        for i in range(n-2):
+        # if it's not, add the combinations together
+        # iteratively and update them as we go
+        for i in range(n-2): ## O(n)
             answer = n0 + n1 + n2
             # update the values
             n0 = n1
