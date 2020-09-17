@@ -4,6 +4,8 @@ Returns: an integer
 '''
 # how many ways can cookie monster eat n cookies?
 def eating_cookies(n):
+    if n < 0:
+        return 0
     # create an array with the base values
     base = [1, 1, 2]
     # if n is an index in the base array:
@@ -31,6 +33,6 @@ def eating_cookies(n):
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
-    num_cookies = 4
+    num_cookies = 40
 
     print(f"There are {eating_cookies(num_cookies)} ways for Cookie Monster to eat {num_cookies} cookies")
